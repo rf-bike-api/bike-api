@@ -28,6 +28,6 @@ public class Bike extends Product {
 
     //private SuspensionType suspensionType;
 
-    //private List<Accessorie> accessorieList = new ArrayList<>();
+    //private List<Accessory> accessoryList = new ArrayList<>();
 
 }
