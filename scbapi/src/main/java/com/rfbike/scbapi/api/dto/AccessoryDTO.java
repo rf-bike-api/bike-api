@@ -12,10 +12,14 @@ import  org.modelmapper.ModelMapper;
 public class AccessoryDTO {
     private Long id;
     private String name;
-    //private AccessoryTypeDTO accessoryType;
+    private Long idAccessoryType;
+    private String typeAccessoryType;
 
     public static AccessoryDTO create(Accessory accessory) {
         ModelMapper modelMapper = new ModelMapper();
-        return modelMapper.map(accessory, AccessoryDTO.class);
+        AccessoryDTO dto = modelMapper.map(accessory, AccessoryDTO.class);
+        assert dto.getIdAccessoryType().equals(accessory.getAccessoryType().getId());
+        assert dto.getTypeAccessoryType().equals(accessory.getAccessoryType().getType());
+        return dto;
     }
 }

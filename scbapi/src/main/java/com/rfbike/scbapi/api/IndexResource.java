@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/")
-public class IndexResourse {
+public class IndexResource {
 
     @GetMapping()
     public String get(){return "SCB API";}

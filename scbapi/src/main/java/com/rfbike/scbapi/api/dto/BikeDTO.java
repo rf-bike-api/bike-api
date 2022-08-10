@@ -13,11 +13,15 @@ public class BikeDTO {
     private Long id;
     private String color;
     private double weight;
-    //private SuspensionType suspensionType;
+    private Long idSuspensionType;
+    private String typeSuspensionType;
     //private List<Accessory> accessoryList = new ArrayList<>();
 
     public static BikeDTO create(Bike bike) {
         ModelMapper modelMapper = new ModelMapper();
-        return modelMapper.map(bike, BikeDTO.class);
+        BikeDTO dto = modelMapper.map(bike, BikeDTO.class);
+        assert dto.getIdSuspensionType().equals(bike.getSuspensionType().getId());
+        assert dto.getTypeSuspensionType().equals(bike.getSuspensionType().getType());
+        return dto;
     }
 }
