@@ -21,3 +21,9 @@ SuspensionType*<br/>
 
 *Added class.
 
+<h2>Added GetMaping</h2>
+<strong>Added GetMapping annotations for the following classes: </strong><br/>
+Accessory*<br/>
+AccessoryType*<br/>
+*The name 'accessorie' has been fixed to 'accessory'
+
