@@ -42,3 +42,9 @@ Added DTO package as well as all of its new classes ('entity_name'DTO);<br/>
 Added exception for entity not found;<br/>
 Added use of ModelMapper library (for the DTO strategy).<br/>
 
+<h2>Added Class Relationship(DTO)</h2>
+<strong>The following changes have been made to add relation between classes:</strong><br/>
+Bike @oneToMany SuspensionType<br/>
+Client @oneToOne Address<br/>
+Accessory @oneToMany AccessoryType<br/>
+
