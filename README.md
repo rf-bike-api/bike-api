@@ -27,3 +27,12 @@ Accessory*<br/>
 AccessoryType*<br/>
 *The name 'accessorie' has been fixed to 'accessory'
 
+<h2>Finished* GetMaping</h2>
+<strong>Added GetMapping annotations for the remaining classes: </strong><br/>
+Address<br/>
+Bike<br/>
+Cart<br/>
+Client<br/>
+SuspensionType<br/>
+*Until possible further changes
+
