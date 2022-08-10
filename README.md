@@ -36,3 +36,9 @@ Client<br/>
 SuspensionType<br/>
 *Until possible further changes
 
+<h2>Added Data Tranfer Object(DTO)</h2>
+<strong>The following canges have been made:</strong><br/>
+Added DTO package as well as all of its new classes ('entity_name'DTO);<br/>
+Added exception for entity not found;<br/>
+Added use of ModelMapper library (for the DTO strategy).<br/>
+
