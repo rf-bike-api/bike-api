@@ -1,6 +1,6 @@
 package com.rfbike.scbapi.api.controller;
 
-import com.rfbike.scbapi.model.entity.Address;
+import com.rfbike.scbapi.api.dto.AddressDTO;
 import com.rfbike.scbapi.service.AddressService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/addresses")
@@ -21,13 +20,13 @@ public class AddressController {
 
     @GetMapping()
     public ResponseEntity get() {
-        List<Address> addressList = service.getAddresses();
+        List<AddressDTO> addressList = service.getAddresses();
         return ResponseEntity.ok(addressList);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
-        Optional<Address> address = service.getAddressById(id);
+        AddressDTO address = service.getAddressById(id);
         return ResponseEntity.ok(address);
     }
 

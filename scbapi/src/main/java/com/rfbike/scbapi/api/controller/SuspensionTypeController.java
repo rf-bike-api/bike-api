@@ -1,5 +1,6 @@
 package com.rfbike.scbapi.api.controller;
 
+import com.rfbike.scbapi.api.dto.SuspensionTypeDTO;
 import com.rfbike.scbapi.model.entity.SuspensionType;
 import com.rfbike.scbapi.service.SuspensionTypeService;
 import lombok.AllArgsConstructor;
@@ -21,13 +22,13 @@ public class SuspensionTypeController {
 
     @GetMapping()
     public ResponseEntity get() {
-        List<SuspensionType> suspensionTypeList = service.getSuspensionTypes();
+        List<SuspensionTypeDTO> suspensionTypeList = service.getSuspensionTypes();
         return ResponseEntity.ok(suspensionTypeList);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
-        Optional<SuspensionType> suspensionType = service.getSuspensionTypeById(id);
+        SuspensionTypeDTO suspensionType = service.getSuspensionTypeById(id);
         return ResponseEntity.ok(suspensionType);
     }
 }
